@@ -6,7 +6,6 @@
     <title>Sistema Calculo Metabólico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
-    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
     <!--DIV DO HEADER DO SITE-->
@@ -39,7 +38,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="peso">Idade</label>
+                <label for="idade">Idade</label>
                 <input type="idade" class="form-control" id="idade" placeholder="Informe a sua idade">
             </div>
         </div>
@@ -57,27 +56,27 @@
         <div class="col-md-2"></div>
         <div class="col-md-4">
             <div class="form-group">
-                <label id="intensidade" for="intensidade">Selecione a Intensidade do Exercício</label>
-                <select class="form-control">
+                <label for="intensidade">Selecione a Intensidade do Exercício</label>
+                <select class="form-control" id="intensidade">
                     <option selected hidden>Selecione a Intensidade do Exercício</option>
-                    <option>Leve</option>
-                    <option>Moderado</option>
-                    <option>Pesado</option>
+                    <option value="1">Leve</option>
+                    <option value="2">Moderado</option>
+                    <option value="3">Pesado</option>
                 </select>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label id="exercicio" for="exercicio">Selecione o Exercício</label>
-                <select class="form-control" disabled>
+                <label for="exercicio">Selecione o Exercício</label>
+                <select class="form-control" id="exercicio" disabled>
                     <option selected hidden>Selecione o Exercício</option>
-                    <option>Leve</option>
-                    <option>Moderado</option>
-                    <option>Pesado</option>
                 </select>
             </div>
         </div>
     <div class="col-md-2"></div>         
-    </div>       
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select.js"></script>       
 </body>
 </html>
