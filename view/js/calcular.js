@@ -1,14 +1,13 @@
 document.getElementById("btnCalcular").onclick = function(){
 	
-	var altura = document.getElementById("altura").value
-    var idade = document.getElementById("idade").value;
-    var peso = document.getElementById("peso").value;
+	var altura = parseInt(document.getElementById("altura").value);
+    var idade = parseInt(document.getElementById("idade").value);
+    var peso = parseFloat(document.getElementById("peso").value);
     var sexo = document.getElementById("sexo").checked;
 
     var elem = document.getElementById("intensidade"),
 		selectedNode = elem.options[elem.selectedIndex].value;
-    
-    
+
     var cte = 0;    
     
 	console.log(sexo);
