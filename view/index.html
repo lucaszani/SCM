@@ -27,8 +27,8 @@
         </div>
         <div class="col-md-4">  
             <div class="form-group">
-                <label for="email">e-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                <label for="altura">Altura</label>
+                <input type="altura" class="form-control" id="altura" placeholder="Informe sua altura em centimetros">
             </div>
         </div>
         <div class="col-md-2"></div>     
@@ -59,9 +59,10 @@
                 <label for="intensidade">Selecione a Intensidade do Exercício</label>
                 <select class="form-control" id="intensidade">
                     <option selected hidden>Selecione a Intensidade do Exercício</option>
-                    <option value="1">Leve</option>
-                    <option value="2">Moderado</option>
-                    <option value="3">Pesado</option>
+                    <option value="1">Repouso</option>
+                    <option value="2">Leve</option>
+                    <option value="3">Moderado</option>
+                    <option value="4">Instenso</option>
                 </select>
             </div>
         </div>
@@ -75,8 +76,36 @@
         </div>
     <div class="col-md-2"></div>         
     </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <label for="sexo">Sexo</label>  
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="sexo" value="option1">Masculino
+                    </br>
+                    <input type="radio" name="optionsRadios" id="sexo" value="option2">Feminino
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-6">
+            <button  type="button" class="btn btn-default btn-lg" id ="btnCalcular">Calcular</button>
+        </div>
+    </div>    
+
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/select.js"></script>       
+    <script src="js/select.js"></script>
+    <script src="js/calcular.js"></script>
+    <br>
+    <br>
+    <footer>    
+        <p class="text-center">Todos os direitos reservados SteveCorps©</p>
+    </footer>     
 </body>
 </html>
