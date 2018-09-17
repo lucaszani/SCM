@@ -2,19 +2,18 @@ document.getElementById("btnCalcular").onclick = function(){
 	
 	var altura = parseInt(document.getElementById("altura").value);
     var idade = parseInt(document.getElementById("idade").value);
-    var peso = parseFloat(document.getElementById("peso").value);
-    var sexo = document.getElementById("sexo").checked;
+    var peso = parseInt(document.getElementById("peso").value);
+    var sexo = document.getElementById("sexo").value;
 
     var elem = document.getElementById("intensidade"),
-		selectedNode = elem.options[elem.selectedIndex].value;
+		selectedNode = parseInt(elem.options[elem.selectedIndex].value);
 
-    var cte = 0;    
-    
-	console.log(sexo);
+    var cte = 0;   
 
-	 if(sexo == true){
+	 //if(sexo == "option1"){
         if(idade >= 19){
             if(selectedNode == 1){
+            	cte = ((662-9.53) * (idade) + 1 * (15.91 * peso) + (539.6 * altura))
             }
             else if(selectedNode == 2){
                 cte = ((662-9.53) * (idade) + 1.11 * (15.91 * peso) + (539.6 * altura));
@@ -49,8 +48,8 @@ document.getElementById("btnCalcular").onclick = function(){
         else{
             console.log("informe sua idade");
         }
-    }
-    else if (sexo == false){
+    //}   
+    /*else if (sexo == false){
         if(idade >= 19){
             if(selectedNode == 1){
                 cte = ((354-6.91) * (idade) + 1 * (9.36 * peso) + (726 * altura));
@@ -85,6 +84,6 @@ document.getElementById("btnCalcular").onclick = function(){
                 console.log("Informe a sua idade");
             }
         }
-    }   
+    }*/   
     console.log(cte);
 }
