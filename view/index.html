@@ -5,107 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sistema Calculo Metabólico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css"/>
 </head>
 <body>
     <!--DIV DO HEADER DO SITE-->
-    <div class="container-fluid" class="col-sm-12" class="col-md-12" class="col-lg-12">
-        <!--DIV DO LOGO DO SISTEMA-->
-        <div id="div da imagem" class="col-sm-4" class="col-md-4" class="col-lg-4">
-            <img src="../images/scm-logo-compact.svg" class="img-responsive" alt="Responsive image"> 
+    <header>
+        <div class="container-fluid" style="background-color: #dcdde1">
+            <div class="col-md-1"></div>
+            <div id="logo" class="col-sm-2" class="col-md-2" class="col-lg-2">
+                <img src="../images/logo.png" class="img-responsive" alt="Responsive image">
+                <br> 
+            </div>  
         </div>
-    </div>
-    <br>
+    </header>
+
     <!--FORMULARIO COM AS INFORMAÇÕES DO USUÁRIO-->
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="nomeCompleto">Nome Completo</label>
-                <input type="nome" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo">
+    <div class="container-fluid" style="background-color: #f5f6fa">
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="nomeCompleto">Nome Completo</label>
+                    <input type="nome" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo">
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">  
-            <div class="form-group">
-                <label for="altura">Altura</label>
-                <input type="altura" class="form-control" id="altura" placeholder="Informe sua altura em centimetros">
+            <div class="col-md-4">  
+                <div class="form-group">
+                    <label for="altura">Altura</label>
+                    <input type="altura" class="form-control" id="altura" placeholder="Informe sua altura em centimetros">
+                </div>
             </div>
+            <div class="col-md-2"></div>     
         </div>
-        <div class="col-md-2"></div>     
-    </div>
 
-    <div class="row">    
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="idade">Idade</label>
-                <input type="idade" class="form-control" id="idade" placeholder="Informe a sua idade">
+        <div class="row">    
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="idade">Idade</label>
+                    <input type="idade" class="form-control" id="idade" placeholder="Informe a sua idade">
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">           
-            <div class="form-group">
-                <label for="peso">Peso</label>
-                <input type="peso" class="form-control" id="peso" placeholder="Informe a seu peso em kilogramas">
+            <div class="col-md-4">           
+                <div class="form-group">
+                    <label for="peso">Peso</label>
+                    <input type="peso" class="form-control" id="peso" placeholder="Informe a seu peso em kilogramas">
+                </div>
             </div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="col-md-2"></div>
-    </div>
-    
-    <!--DIV DE SELEÇÃO DA INTENSIDADE E EXERCÍCIO REALIZADO-->
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="intensidade">Selecione a Intensidade do Exercício</label>
-                <select class="form-control" id="intensidade">
-                    <option selected hidden>Selecione a Intensidade do Exercício</option>
-                    <option value="1">Repouso</option>
-                    <option value="2">Leve</option>
-                    <option value="3">Moderado</option>
-                    <option value="4">Instenso</option>
-                </select>
+        
+        <!--DIV DE SELEÇÃO DA INTENSIDADE E EXERCÍCIO REALIZADO-->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="intensidade">Selecione a Intensidade do Exercício</label>
+                    <select class="form-control" id="intensidade">
+                        <option selected hidden>Selecione a Intensidade do Exercício</option>
+                        <option value="1">Repouso</option>
+                        <option value="2">Leve</option>
+                        <option value="3">Moderado</option>
+                        <option value="4">Instenso</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label for="exercicio">Selecione o Exercício</label>
-                <select class="form-control" id="exercicio" disabled>
-                    <option selected hidden>Selecione o Exercício</option>
-                </select>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="exercicio">Selecione o Exercício</label>
+                    <select class="form-control" id="exercicio" disabled>
+                        <option selected hidden>Selecione o Exercício</option>
+                    </select>
+                </div>
             </div>
+        <div class="col-md-2"></div>         
         </div>
-    <div class="col-md-2"></div>         
-    </div>
 
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <label for="sexo">Sexo</label>  
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="sexo" value="option1">Masculino
-                    </br>
-                    <input type="radio" name="optionsRadios" id="sexo" value="option2">Feminino
-                </label>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <label class="radio control-label">Sexo</label>  
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="sexo" value="option1">Masculino
+                        </br>
+                        <input type="radio" name="optionsRadios" id="sexo" value="option2">Feminino
+                    </label>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-5"></div>
-        <div class="col-md-6">
-            <button  type="button" class="btn btn-default btn-lg" id ="btnCalcular">Calcular</button>
+        <br>
+        <div class="row" >
+            <div class="col-md-5"></div>
+            <div class="col-md-1">
+                <button  type="button" class="btn btn-danger btn-lg" id ="btnCalcular">Calcular</button>
+            </div>
+            <div class="col-md-1">
+                <button  type="button" class="btn btn-danger btn-lg" id ="btnCalcular">Limpar</button>
+            </div>
         </div>
+        </br>
+        </br>
     </div>    
+
+    <footer>
+        <div class="container-fluid">
+            <br>   
+            <p>Todos os direitos reservados SteveCorps©</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/select.js"></script>
     <script src="js/calcular.js"></script>
-    <br>
-    <br>
-    <footer>    
-        <p class="text-center">Todos os direitos reservados SteveCorps©</p>
-    </footer>     
+
 </body>
 </html>
