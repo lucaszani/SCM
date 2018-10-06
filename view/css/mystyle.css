@@ -1,0 +1,64 @@
+#Footer 
+{
+	background-color: #373a48;
+    color:white;   
+}
+
+#Footer .corporacao-footer
+{
+    font-family:'Franklin Gothic Medium';
+	background-color: #383737;
+	padding-top:13px;
+	padding-bottom:13px;
+    text-align: center;    
+}
+
+#Footer .icorporacao-footer
+{
+    font-family:'Franklin Gothic Medium';
+	background-color: #7c7c7c;
+	padding-top:20px;
+	padding-bottom:20px;
+    text-align: center;  
+}
+.rede-sociais{
+	padding-top: 30px;
+	padding-bottom: 38px;
+}
+
+.rede-sociais a{
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #ffffff;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.rede-sociais a:hover
+{
+	text-decoration: none;
+
+}
+
+.facebook:hover
+{
+	color:#0077e2;
+}
+
+.google:hover
+{
+	color:#ef1a1a;
+}
+
+.twitter:hover
+{
+	color: #00aced;
+}
+
+.myclass
+{
+	font-family:'Franklin Gothic Medium';
+	background-color: #2c2c54;
+	color: white;
+}

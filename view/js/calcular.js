@@ -9,7 +9,8 @@ document.getElementById("btnCalcular").onclick = function(){
 		selectedNode = parseInt(elem.options[elem.selectedIndex].value);
 
     var cte = 0;   
-
+    
+    
 	 //if(sexo == "option1"){
         if(idade >= 19){
             if(selectedNode == 1){

@@ -1,127 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <title>Sistema Calculo Metabólico</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sistema Calculo Metabólico</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-with, initial-scale=1, shrink-to-fit=no">
+    <meta name= "author" content="Pitagoras,Steve,Amarildo,Andre,LucasZani e WillKratosCruz">
+    <meta name="keyworks" content="Calculo Metabolico">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css"/>-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/calcular.js"></script>
+    <script src="js/limpa.js"></script>
+    <script src="js/validacao.js"></script>
+    <script src="js/validar.js"></script>
 </head>
 <body>
     <!--DIV DO HEADER DO SITE-->
     <header>
-        <div class="container-fluid" style="background-color: #dcdde1">
-            <div class="col-md-1"></div>
-            <div id="logo" class="col-sm-2" class="col-md-2" class="col-lg-2">
-                <img src="../images/logo.png" class="img-responsive" alt="Responsive image">
-                <br> 
-            </div>  
-        </div>
+            <div class="p-3 mb-2 bg-secondary ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                         <div class="col-2">
+                                <img src="images/logo.png" class="img-responsive" alt="Responsive image" height="140px" width="260px">
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>                       
+                </div>
+            </div>               
     </header>
-
     <!--FORMULARIO COM AS INFORMAÇÕES DO USUÁRIO-->
-    <div class="container-fluid" style="background-color: #f5f6fa">
-        <br>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="nomeCompleto">Nome Completo</label>
-                    <input type="nome" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo">
-                </div>
-            </div>
-            <div class="col-md-4">  
-                <div class="form-group">
-                    <label for="altura">Altura</label>
-                    <input type="altura" class="form-control" id="altura" placeholder="Informe sua altura em centimetros">
-                </div>
-            </div>
-            <div class="col-md-2"></div>     
-        </div>
-
-        <div class="row">    
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="idade">Idade</label>
-                    <input type="idade" class="form-control" id="idade" placeholder="Informe a sua idade">
-                </div>
-            </div>
-            <div class="col-md-4">           
-                <div class="form-group">
-                    <label for="peso">Peso</label>
-                    <input type="peso" class="form-control" id="peso" placeholder="Informe a seu peso em kilogramas">
-                </div>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
+    <form id="fml" name="fmr">
+        <div class="p-3 mb-2 bg-light ">
+            <div class="form-group">
         
-        <!--DIV DE SELEÇÃO DA INTENSIDADE E EXERCÍCIO REALIZADO-->
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="intensidade">Selecione a Intensidade do Exercício</label>
-                    <select class="form-control" id="intensidade">
-                        <option selected hidden>Selecione a Intensidade do Exercício</option>
-                        <option value="1">Repouso</option>
-                        <option value="2">Leve</option>
-                        <option value="3">Moderado</option>
-                        <option value="4">Instenso</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="exercicio">Selecione o Exercício</label>
-                    <select class="form-control" id="exercicio" disabled>
-                        <option selected hidden>Selecione o Exercício</option>
-                    </select>
-                </div>
-            </div>
-        <div class="col-md-2"></div>         
-        </div>
+                    <br>     
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="nomeCompleto">Nome Completo</label>
+                                <input type="text" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo" onkeyup="validar(this,'text');">
+                            </div>
+                        </div>
+                        <div class="col-md-4">  
+                            <div class="form-group">
+                                <label for="altura">Altura</label>
+                                <input type="number" class="form-control" id="altura" placeholder="Informe sua altura em centimetros">
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>     
+                    </div>
+                    <div class="row">    
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="idade">Idade</label>
+                                <input type="number" class="form-control" id="idade"name="idade" placeholder="Informe a sua idade">
+                            </div>
+                        </div>
+                        <div class="col-md-4">           
+                            <div class="form-group">
+                                <label for="peso">Peso</label>
+                                <input type="number" class="form-control" id="peso" placeholder="Informe a seu peso em kilogramas">
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>       
+                    <!--DIV DE SELEÇÃO DA INTENSIDADE E EXERCÍCIO REALIZADO-->
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="intensidade">Selecione a Intensidade do Exercício</label>
+                                <select class="form-control" id="intensidade">
+                                    <option selected hidden>Selecione a Intensidade do Exercício</option>
+                                    <option value="1">Repouso</option>
+                                    <option value="2">Leve</option>
+                                    <option value="3">Moderado</option>
+                                    <option value="4">Instenso</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exercicio">Selecione o Exercício</label>
+                                <select class="form-control" id="exercicio" disabled>
+                                    <option selected hidden>Selecione o Exercício</option>
+                                </select>
+                            </div>
+                        </div>
+                    <div class="col-md-2"></div>         
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <label class="radio control-label">Sexo</label>  
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="sexo" value="option1">Masculino
+                                    <br/>
+                                    <input type="radio" name="optionsRadios" id="sexo" value="option2">Feminino
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row" >
 
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
-                <label class="radio control-label">Sexo</label>  
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="sexo" value="option1">Masculino
-                        </br>
-                        <input type="radio" name="optionsRadios" id="sexo" value="option2">Feminino
-                    </label>
+                        <div class="col">
+                         </div>
+
+                        <div class="col-2">                                
+                            <button  type="button" class="btn btn-danger btn-lg" id ="btnCalcular" onclick="valid()">Calcular</button>         
+                        </div>
+
+                        <div class="col-6">
+                            <button  type="reset" class="btn btn-danger btn-lg" id ="btnLimpar" >Limpar</button>
+                        </div>
+
+                    </div>
+                              
                 </div>
-            </div>
-        </div>
-
-        <br>
-        <div class="row" >
-            <div class="col-md-5"></div>
-            <div class="col-md-1">
-                <button  type="button" class="btn btn-danger btn-lg" id ="btnCalcular">Calcular</button>
-            </div>
-            <div class="col-md-1">
-                <button  type="button" class="btn btn-danger btn-lg" id ="btnLimpar">Limpar</button>
-            </div>
-        </div>
-        </br>
-    </div>    
-
+      </div>
+    </form>
     <footer>
-        <div class="container-fluid" style="background-color: #c4c3c9" style="align-items: center">
-            <div class="col-md-1"></div>
-            <div id="logo" class="col-sm-2" class="col-md-2" class="col-lg-2">
-                <img src="../images/Logo_CEUNSP.png" class="img-responsive" alt="Responsive image">
-            </div>  
-        </div>
-    </footer>
-
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/select.js"></script>
-    <script src="js/calcular.js"></script>
-
+            <div class="p-3 mb-2 bg-secondary text-white "><!--DIV DO FOOTER DO SITE--> 
+                <div class="container-fluid">
+                    <div class="row" >
+                        <div class="col">
+                         </div>
+                        <div class="col-3">
+                            <p class="text-monospace">© 2018 SteveCorps Todos os direitos reservados</p>
+                         </div>
+                        <div class="col">
+                        </div>
+                    </div>                     
+                </div>                                                                    
+            </div>                                          
+    </footer> 
 </body>
 </html>
