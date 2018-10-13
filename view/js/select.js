@@ -3,7 +3,7 @@ $(document).ready(function () {
         $('#exercicio').html('');
         var exercicios = [];
         if ($('#intensidade').val() == 1) {
-            exercicios = ['Caminhada', 'Supino 50% 1 RM', 'Rosca Direta 50% 1 RM'];
+            exercicios = ['Nenhum exercício disponível'];
             var novosExercicios = '';
 
             exercicios.forEach(function(valor){
@@ -11,11 +11,10 @@ $(document).ready(function () {
             });
 
             $('#exercicio').html(novosExercicios);
-
-            $('#exercicio').removeAttr('disabled');
-        }
-        else if ($('#intensidade').val() == 2) {
-            exercicios = ['Corrida 60/75% FC', 'Supino 60/70% 1 RM', 'Puxador Alto 60/70% 1 RM'];
+            
+        }        
+        if ($('#intensidade').val() == 2) {
+            exercicios = ['Caminhada', 'Passear com o cachorro', 'Ir ao mercado a pé', 'Fazer uma aula de alongamento'];
             var novosExercicios = '';
 
             exercicios.forEach(function(valor){
@@ -27,7 +26,19 @@ $(document).ready(function () {
             $('#exercicio').removeAttr('disabled');
         }
         else if ($('#intensidade').val() == 3) {
-            exercicios = ['Corrida 76/90% FC', 'Supino 4x até falha', 'Extensão de cotovelo 4x até falha'];
+            exercicios = ['Praticar esporte por lazer', 'Pedalar sem ficar ofegante', 'Correr sem fiar ofegante', 'Treinar musculação em ciruito'];
+            var novosExercicios = '';
+
+            exercicios.forEach(function(valor){
+                novosExercicios += '<option value="' + valor + '">' + valor + '</option>';
+            });
+
+            $('#exercicio').html(novosExercicios);
+
+            $('#exercicio').removeAttr('disabled');
+        }
+        else if ($('#intensidade').val() == 4) {
+            exercicios = ['Praticar HIIT', 'Correr até ficar ofegante', 'Musculação intensa', 'Treinar sprints'];
             var novosExercicios = '';
 
             exercicios.forEach(function(valor){
